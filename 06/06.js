@@ -44,12 +44,8 @@ const box = ['###', '#*#', '# #', '# #', '###']
 
 
 function inBox(box) {
-    const HASHTAG_REGEX = /^#+$/;
     const [top] = box;
-    const bottom = box.at(-1);
     const boxLength = top.length
-
-    if (!HASHTAG_REGEX.test(bottom) || top !== bottom) return false;
 
     const insiderBox = box.slice(1, -1)
 
